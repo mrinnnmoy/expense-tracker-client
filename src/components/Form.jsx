@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 // Used to get data to console log for the form inputs
+import List from "./List";
 
 const Form = () => {
 
@@ -30,7 +31,7 @@ const Form = () => {
           </div>
         </div>
       </form>
-      {/* List */}
+      <List />
     </div>
   )
 };
