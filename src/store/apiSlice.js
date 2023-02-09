@@ -5,18 +5,19 @@ const baseURI = "http://localhost:8080";
 export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: baseURI }),
   endpoints: (builder) => ({
+
     // get categories
     getCategories: builder.query({
       // get: 'http://localhost:8080/api/categories'
       query: () => "/api/categories",
-      providesTags: ["categories"],
+      // providesTags: ["categories"],
     }),
 
     // get labels
     getLabels: builder.query({
       // get: 'http://localhost:8080/api/labels'
       query: () => "/api/labels",
-      providesTags: ["transaction"],
+      // providesTags: ["transaction"],
     }),
 
     // add new Transaction
@@ -27,7 +28,7 @@ export const apiSlice = createApi({
         method: "POST",
         body: initialTransaction,
       }),
-      invalidatesTags: ["transaction"],
+      // invalidatesTags: ["transaction"],
     }),
 
     // delete record
@@ -38,7 +39,7 @@ export const apiSlice = createApi({
         method: "DELETE",
         body: recordId,
       }),
-      invalidatesTags: ["transaction"],
+      // invalidatesTags: ["transaction"],
     }),
   }),
 });
